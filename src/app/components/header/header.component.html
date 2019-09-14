@@ -1,0 +1,26 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header" align="left">
+			<a class="navbar-brand" href="#">Missing Data Report Dashboard</a>
+			<div class="searching">
+				
+				<select [(ngModel)]="selectedLevel" (change)="selected()">
+					<option *ngFor="let item of data" [ngValue]="item">{{item.name}}</option>
+				  </select>
+				<input #s_number type="text" placeholder="Search.." name="search">
+				<button routerLink="/missingstroes" (click)="searchStore(s_number.value)">Search</button>
+			</div>
+		</div>
+	</div>
+	</nav>
+</body>
+</html>

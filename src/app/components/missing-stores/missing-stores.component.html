@@ -1,0 +1,39 @@
+<p>
+missing-stores works!
+</p>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+</head>
+
+<body>
+<div class="container">	
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Physical ID</th>
+			<th>Company Number</th>
+			<th>Physical Name</th>
+			<th>Country_Name</th>
+			<th>Partner Person Name</th>
+		</tr>
+    </thead>
+    
+	
+        <tbody>
+		<tr *ngFor="let store of missingStores">
+			<td>{{store.holding_company_id}}</td>
+			<td>{{store.holding_company_name}}</td>
+			<td>{{store.phys_id}}</td>
+			<td>{{store.comp_no}}</td>
+			<td>{{store.country_name}}</td>
+		</tr>
+	</tbody>
+    
+</table>
+</div>
+</body>
